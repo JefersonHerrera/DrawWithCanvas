@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dibuja con canvas</title>
+</head>
+<body>
+    <header>
+        <P><span id="unico1" >DIBUJA</span> <span id="unico2" >CON</span> <span id="unico3" >CANVAS</span> </P>
+    </header>
+    <article>
+        <section id="SEC2">
+            <div id="section4">
+                <p class="subtitulos">Dibuja tu mismo</p>
+                <p class="parrafos">
+                    Bienvenido al dibujador de <b>canvas</b>. <br> <br>
+                    Aqui podras dibujar todo lo que quieras y crear nuevas cosas con tu maravillosa imaginación.<br> <br>
+                    ¡No hay tiempo que perder, <br> a dibujar!
+                </p>
+            </div>
+            <div id="section5" >
+                <p class="subtitulos">Selecciona el color del trazo:</p>
+                <input id="color2" type="color">
+                <p class="subtitulos">Escribe el tamaño del trazo:</p>
+                <input type="text" id="pixelestamaño">
+            </div>
+            <div id="section6" >
+                <canvas width="400" height="400" id="canvasito"></canvas>
+                <input id="limpiardibujodos" type="button" value="Limpiar tablero">
+            </div>   
+        </section>
+
+        <!--Section 2-->
+
+        <section id="SEC1" >
+            <div id="section1">
+                <p class="subtitulos">Figuras con canvas</p>
+                <p class="parrafos">
+                    Bienvenido al dibujador de <b>canvas</b>. <br> <br>
+                    En esta sección haras aparecer figuras en el tablero con las especificaciones que quieras; para ello deberas
+                    dar click sobre el nombre de la <b>figura</b> que quieres <b>dibujar</b> , despues selecciona el <b>color</b> y con ello das en <b>GENERAR FIGURA.</b><br> <br>
+                    ¡Disfruta dibujando figuras!
+                </p>
+            </div>
+            <div id="section2">
+    
+                <p class="subtitulos">Selecciona la figura:</p>
+                <input  id="figura1" type="button" value="TRIANGULO">
+                <input  id="figura2" type="button" value="DIAMANTE">
+                <input  id="figura3" type="button" value="LINEAS">
+                
+                <p class="subtitulos">Selecciona el color de tu figura:</p>
+                <input id="color" type="color">
+                <span>
+                    <input id="generarfigura" type="button" value="GENERAR FIGURA">
+                </span>
+            </div>
+            <div id="section3">
+                <canvas width="400" height="400" id="canvas"></canvas>
+                <input id="limpiardibujo" type="button" value="Limpiar tablero">
+            </div>
+        </section>   
+    </article>
+    <footer>
+        <p id="desarrollado">
+            Proyecto desarrollado por Jeferson Herrera.
+        </p>
+        <p id="sociales">
+            Contactame a traves de mis redes sociales.
+        </p>
+        <p>
+            <a target="_blank" href="https://facebook.com/Jeferson.J.Herrera.M"><img class="iconoredsocial" src="img/favebook.png" alt="linkfacebook"></a>
+            <a target="_blank" href="https://wa.link/t4fb2s"><img class="iconoredsocial" src="img/wasa.png" alt="linkwhatsapp"></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UC3_Fk9X1F_T2KC55QjSiv8w"><img class="iconoredsocial" src="img/yutu.png" alt="linkyoutube"></a>
+
+        </p>
+        <p id="derechos">
+            Todos los derechos reservados 2021 ©    
+        </p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+#unico1{
+    color: #9649E3;
+}
+#unico2{
+    color: #32E36D;
+}
+#unico3{
+    color: #E3931B;
+}
+body{
+    background-color: #ffffff;
+    font-family: 'Roboto Mono', monospace;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+canvas{
+    background-color: rgb(255, 255, 255);
+    
+}
+input{
+    font-family: 'Roboto Mono', monospace;
+    border: none;
+    color: #8f8f8f;
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+    text-align: center;
+    margin: 20px 5px;
+    transition-duration: 0.5;
+    border-radius: 10%;
+}
+input:hover{
+    background-color: #c5c5c5;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.subtitulos{
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffffff; 
+}
+.parrafos{  
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+header{
+    width: 100%;
+    height: 500px;
+    
+}
+header p{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 200px;  
+}
+article{
+    margin: 0;
+    padding: 0;
+}
+/*SECTION 1*/
+
+#SEC2{
+    width: 100%;
+    height: 500px;
+    background-color: #9649E3;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#section4{
+    min-width: 280px;
+    width: 280px;
+    height: 240px;
+    padding: 20px;
+}
+#pixelestamaño{
+    color: rgb(0, 0, 0);
+}
+#pixelestamaño:hover{
+    background-color: #c5c5c5;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#section5{
+    min-width: 280px; 
+    width: 280px;
+    height: 100px;
+    padding: 20px;
+}
+
+#section6{
+    min-width: 400px;
+    width: 400px; 
+    height: 500px;  
+    padding: 40px;
+}
+#limpiardibujodos{
+    margin: 15px 136px;
+}
+#color2{
+    display: block;
+}
+/*SECTION 2*/
+
+#SEC1{
+    width: 100%;
+    height: 500px;
+    background-color: #32E36D;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+#limpiardibujo{
+    margin: 15px 136px;
+}
+
+#section1{
+    min-width: 280px;
+    width: 280px;
+    height: 240px;
+    padding: 20px;
+}
+
+
+#section2{
+    min-width: 280px; 
+    width: 280px;
+    height: 100px;
+    padding: 20px;
+}
+
+#section3{
+    min-width: 400px;
+    width: 400px; 
+    height: 500px;  
+    padding: 40px;
+}
+#color{
+    display: block;
+}
+/*FOOTER*/
+footer{
+    display: flex;
+    background-color: #E3931B;
+    flex-wrap: wrap;
+    color: #dadada;
+    font-size: 14px;
+}
+#desarrollado{
+    width: 100%;
+    margin-bottom: 35px;
+}#sociales{
+    width: 100%;
+}
+.iconoredsocial{
+    width: 25px;
+    margin: 15px;
+}
+#derechos{
+    margin-top: 15px;
+    width: 100%;
+}
