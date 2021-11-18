@@ -157,10 +157,13 @@ function mousepresionado(valorfuncion1){
     xi2 = valorfuncion1.layerX;
     yi2 = valorfuncion1.layerY;
 }
-canvasdos.addEventListener("mouseup",mousesuelto);
-var xf2 = 0;
-var yf2 = 0;
-function mousesuelto(valorfuncion2)
+canvasdos.addEventListener("mousemove", mousemovimiento);
+function mousemovimiento()
+{
+    canvasdos.addEventListener("mouseup",mousesuelto);
+    var xf2 = 0;
+    var yf2 = 0;
+    function mousesuelto(valorfuncion2)
 {
     
     xf2 = valorfuncion2.layerX;
@@ -174,6 +177,8 @@ function mousesuelto(valorfuncion2)
     }
     dibujador2(colorcito2.value, tamañolienzito.value, xi2,yi2,xf2,yf2)
 }
+}
+
 
 var limpiadordos = document.getElementById("limpiardibujodos");
 limpiadordos.addEventListener("click", limpiardos);
