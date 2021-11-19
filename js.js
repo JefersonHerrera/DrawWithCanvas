@@ -150,6 +150,7 @@ function dibujador2(color2,tamañolienzo, xinicial2, yinicial2, xfinal2, yfinal2
 
 
 /* Funcion de detectar cual es el punto inicial */
+/*MOUSE EVENT PC*/
 canvasdos.addEventListener("mousedown",mousepresionado);
 var xi2 = 0;
 var yi2 = 0;
@@ -178,7 +179,36 @@ function mousemovimiento()
     dibujador2(colorcito2.value, tamañolienzito.value, xi2,yi2,xf2,yf2)
 }
 }
-
+/*TOUCH EVENT PHONE*/
+canvasdos.addEventListener("touchstart",dedopresionado);
+var xi2 = 0;
+var yi2 = 0;
+function dedopresionado(valorfuncion1){
+    xi2 = valorfuncion1.layerX;
+    yi2 = valorfuncion1.layerY;
+}
+canvasdos.addEventListener("touchmove", dedomovimiento);
+function dedomovimiento()
+{
+    canvasdos.addEventListener("touchend",dedosuelto);
+    var xf2 = 0;
+    var yf2 = 0;
+    function dedosuelto(valorfuncion2)
+{
+    
+    xf2 = valorfuncion2.layerX;
+    yf2 = valorfuncion2.layerY;
+    
+    if(xf2 >= 400){
+        xf2 = valorfuncion1.layerX;
+    }
+    if(yf2 >= 400){
+        yf2 = valorfuncion1.layerY;
+    }
+    dibujador2(colorcito2.value, tamañolienzito.value, xi2,yi2,xf2,yf2)
+}
+}
+/*LIMPIADOR 2*/
 
 var limpiadordos = document.getElementById("limpiardibujodos");
 limpiadordos.addEventListener("click", limpiardos);
