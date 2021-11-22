@@ -1,6 +1,6 @@
 var canvas = document.getElementById("canvas");
 var lienzo = canvas.getContext("2d");
-/*FFUNCION DE DIBUJAR*/
+/*FUNCION DE DIBUJAR*/
 function dibujador(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.beginPath();
     lienzo.strokeStyle = color;
