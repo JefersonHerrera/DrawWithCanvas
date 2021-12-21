@@ -131,10 +131,11 @@ function limpiar() {
     canvas.width = canvas.width;
 }
 
+
 //DESCARGAR FIGURA
-var jpeg = document.getElementById("descargardibujodos");
-jpeg.addEventListener("click",function(){	
-  var dato = canvasdos.toDataURL("image/jpeg");
+var jpeg2 = document.getElementById("descargarimagen");
+jpeg2.addEventListener("click",function(){	
+  var dato = canvas.toDataURL("image/jpeg");
   dato = dato.replace("image/jpeg", "image/octet-stream");
   document.location.href = dato;	
 },false);
@@ -191,3 +192,11 @@ limpiadordos.addEventListener("click", limpiardos);
 function limpiardos() {
     canvasdos.width = canvasdos.width;
 }
+//DESCARGAR DIBUJO
+var jpeg = document.getElementById("descargardibujodos");
+jpeg.addEventListener("click",function(){	
+  var dato = canvasdos.toDataURL("image/jpeg");
+  dato = dato.replace("image/jpeg", "image/octet-stream");
+  document.location.href = dato;	
+},false);
+
