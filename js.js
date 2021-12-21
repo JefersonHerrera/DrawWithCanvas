@@ -179,11 +179,16 @@ function punteromovimiento(valorfuncion2){
     }
 }
 //PUNTERO EN NO MOVIMIENTO
-canvasdos.addEventListener("mouseup",punteronomovimiento);
-function punteronomovimiento(){
-    xi2 = 0;
-    yi2 = 0;
-    punteroestado = false;
+canvasdos.addEventListener("pointerup",punterono);
+function punterono(valorfuncion3){
+    if(punteroestado === true){
+        dibujador2(colorcito2.value,tamañolienzito.value,xi2,yi2,valorfuncion3.layerX,valorfuncion3.layerY)
+        xi2 = 0;
+        yi2 = 0;
+        punteroestado = false;
+    }
+    
+    
 }
 /*LIMPIADOR 2*/
 
