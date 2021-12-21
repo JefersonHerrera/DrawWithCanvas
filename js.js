@@ -9,7 +9,6 @@ function dibujador(color, xinicial, yinicial, xfinal, yfinal) {
     lienzo.stroke();
     lienzo.closePath();
 }
-
 colorcito = document.getElementById("color");
 contador = 0;
 espaciolineas = 41;
@@ -132,7 +131,15 @@ function limpiar() {
     canvas.width = canvas.width;
 }
 
+//DESCARGAR FIGURA
+var jpeg = document.getElementById("descargardibujodos");
+jpeg.addEventListener("click",function(){	
+  var dato = canvasdos.toDataURL("image/jpeg");
+  dato = dato.replace("image/jpeg", "image/octet-stream");
+  document.location.href = dato;	
+},false);
 /*REALIZANDO PROGRAMACION DE DIBUJAR CON MOUSE*/
+
 var canvasdos = document.getElementById("canvasito");
 var lienzo2 = canvasdos.getContext("2d");
 colorcito2 = document.getElementById("color2");
@@ -148,36 +155,34 @@ function dibujador2(color2,tamañolienzo, xinicial2, yinicial2, xfinal2, yfinal2
     lienzo2.closePath();
 }
 
-
-/* Funcion de detectar cual es el punto inicial */
-/*MOUSE EVENT PC*/
-canvasdos.addEventListener("pointerdown",mousepresionado);
+//DIBUJA
 var xi2 = 0;
 var yi2 = 0;
-function mousepresionado(valorfuncion1){
+
+punteroestado = false;
+//PUNTERO PRESIONADO
+canvasdos.addEventListener("pointerdown",punteropresionado);
+function punteropresionado(valorfuncion1){
     xi2 = valorfuncion1.layerX;
     yi2 = valorfuncion1.layerY;
+    punteroestado = true;
 }
-canvasdos.addEventListener("pointermove", mousemovimiento);
-function mousemovimiento()
-{
-    canvasdos.addEventListener("pointerup",mousesuelto);
-    var xf2 = 0;
-    var yf2 = 0;
-    function mousesuelto(valorfuncion2)
-{
-    
-    xf2 = valorfuncion2.layerX;
-    yf2 = valorfuncion2.layerY;
-    
-    if(xf2 >= 400){
-        xf2 = valorfuncion1.layerX;
+//PUNTERO EN MOVIMIENTO
+canvasdos.addEventListener("pointermove",punteromovimiento);
+function punteromovimiento(valorfuncion2){
+    if(punteroestado === true){
+        
+        dibujador2(colorcito2.value,tamañolienzito.value,xi2,yi2,valorfuncion2.layerX,valorfuncion2.layerY)
+        xi2 = valorfuncion2.layerX;
+        yi2 = valorfuncion2.layerY;
     }
-    if(yf2 >= 400){
-        yf2 = valorfuncion1.layerY;
-    }
-    dibujador2(colorcito2.value, tamañolienzito.value, xi2,yi2,xf2,yf2)
 }
+//PUNTERO EN NO MOVIMIENTO
+canvasdos.addEventListener("mouseup",punteronomovimiento);
+function punteronomovimiento(){
+    xi2 = 0;
+    yi2 = 0;
+    punteroestado = false;
 }
 /*LIMPIADOR 2*/
 
