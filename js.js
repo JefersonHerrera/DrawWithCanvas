@@ -1,3 +1,4 @@
+
 var canvas = document.getElementById("canvas");
 var lienzo = canvas.getContext("2d");
 /*FUNCION DE DIBUJAR*/
@@ -164,6 +165,7 @@ punteroestado = false;
 //PUNTERO PRESIONADO
 canvasdos.addEventListener("pointerdown",punteropresionado);
 function punteropresionado(valorfuncion1){
+    disableScroll();
     xi2 = valorfuncion1.layerX;
     yi2 = valorfuncion1.layerY;
     punteroestado = true;
@@ -181,6 +183,7 @@ function punteromovimiento(valorfuncion2){
 //PUNTERO EN NO MOVIMIENTO
 canvasdos.addEventListener("pointerup",punterono);
 function punterono(valorfuncion3){
+    enableScroll();
     if(punteroestado === true){
         dibujador2(colorcito2.value,tamañolienzito.value,xi2,yi2,valorfuncion3.layerX,valorfuncion3.layerY)
         xi2 = 0;
@@ -205,3 +208,13 @@ jpeg.addEventListener("click",function(){
   document.location.href = dato;	
 },false);
 
+//BLOQUEAAR SCROLL
+function disableScroll(){  
+    var x = window.scrollX;
+    var y = window.scrollY;
+    window.onscroll = function(){ window.scrollTo(x, y) };
+}
+
+function enableScroll(){  
+    window.onscroll = null;
+}
